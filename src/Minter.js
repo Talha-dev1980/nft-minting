@@ -16,7 +16,7 @@ const Minter = (props) => {
   const [userId, setUser] = useState("");
 
 
-  useEffect(async () => {
+useEffect(async () => {
     const { address, status } = await getCurrentWalletConnected();
 
     setWallet(address);
@@ -76,8 +76,8 @@ const Minter = (props) => {
     };
 
     const onMintPressed = async () => {
-      // const { success, status } = await mintNFT();
-      //setStatus(success+status);
+       const { success, status } = await mintNFT();
+      setStatus(success+status);
 
     };
 
